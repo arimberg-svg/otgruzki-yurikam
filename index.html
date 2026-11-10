@@ -141,7 +141,15 @@
       color: var(--violet);
     }
     td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    tr.now td { background: var(--soft); }
+    tr.hot td {
+      font-weight: 700;
+      background-image: linear-gradient(
+        transparent 0.42em,
+        rgba(66, 8, 168, 0.55) 0.42em,
+        rgba(66, 8, 168, 0.55) calc(100% - 0.28em),
+        transparent calc(100% - 0.28em)
+      );
+    }
     footer {
       border-top: 1px solid var(--gray);
       color: var(--muted);
@@ -338,39 +346,46 @@
     <p class="fine">По вертикали число реализаций юрлицам и ИП в нерабочие дни, январь–октябрь.</p>
 
     <h2>Магазины</h2>
-    <p>Больше всего таких отгрузок у магазина №17 в Луговом: 736 за январь–октябрь трёх лет. В 2025 году там был провал, 59 отгрузок, в 2026 уже 365. Дальше №5 на Бабарынке, 420, и №11 в Березняках, 378. По сумме №17 и Березняки почти рядом: 4,9 млн ₽.</p>
+    <p>Больше всего таких отгрузок у магазина №17 в Луговом: 732 за январь–октябрь трёх лет. В 2025 году там был провал, 59 отгрузок, в 2026 уже 365. Дальше №5 на Бабарынке, 419, и №11 в Березняках, 378. По сумме №17 и Березняки почти рядом: 4,9 млн ₽. Фиолетовым маркером отмечены магазины, у которых за три года больше 200 таких отгрузок, и клиенты, у которых больше 20.</p>
     <figure>
       <svg viewBox="0 0 920 784" role="img" aria-label="Магазины: отгрузки в нерабочие дни по годам">
+<rect x="6" y="15" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="28" text-anchor="end" font-size="13" fill="#111111">№17 Луговое</text>
 <rect x="196.0" y="14" width="257.2" height="18" fill="#111111"/>
 <rect x="453.2" y="14" width="49.3" height="18" fill="#5c5278"/>
 <rect x="502.4" y="14" width="304.8" height="18" fill="#4208A8"/>
 <text x="815.2" y="28" font-size="13" font-weight="700" fill="#111111">732</text>
+<rect x="6" y="47" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="60" text-anchor="end" font-size="13" fill="#111111">№5 Бабарынка</text>
 <rect x="196.0" y="46" width="127.8" height="18" fill="#111111"/>
 <rect x="323.8" y="46" width="127.8" height="18" fill="#5c5278"/>
 <rect x="451.5" y="46" width="94.4" height="18" fill="#4208A8"/>
 <text x="553.9" y="60" font-size="13" font-weight="700" fill="#111111">419</text>
+<rect x="6" y="79" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="92" text-anchor="end" font-size="13" fill="#111111">№11 Березняки</text>
 <rect x="196.0" y="78" width="81.8" height="18" fill="#111111"/>
 <rect x="277.8" y="78" width="106.0" height="18" fill="#5c5278"/>
 <rect x="383.9" y="78" width="127.8" height="18" fill="#4208A8"/>
 <text x="519.6" y="92" font-size="13" font-weight="700" fill="#111111">378</text>
+<rect x="6" y="111" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="124" text-anchor="end" font-size="13" fill="#111111">№7 Ожогина</text>
 <rect x="196.0" y="110" width="67.6" height="18" fill="#111111"/>
 <rect x="263.6" y="110" width="75.2" height="18" fill="#5c5278"/>
 <rect x="338.8" y="110" width="51.8" height="18" fill="#4208A8"/>
 <text x="398.6" y="124" font-size="13" font-weight="700" fill="#111111">233</text>
+<rect x="6" y="143" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="156" text-anchor="end" font-size="13" fill="#111111">№10 Тобольский тракт</text>
 <rect x="196.0" y="142" width="78.5" height="18" fill="#111111"/>
 <rect x="274.5" y="142" width="34.2" height="18" fill="#5c5278"/>
 <rect x="308.7" y="142" width="74.3" height="18" fill="#4208A8"/>
 <text x="391.0" y="156" font-size="13" font-weight="700" fill="#111111">224</text>
+<rect x="6" y="175" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="188" text-anchor="end" font-size="13" fill="#111111">№2 Авторемонтная</text>
 <rect x="196.0" y="174" width="107.7" height="18" fill="#111111"/>
 <rect x="303.7" y="174" width="40.9" height="18" fill="#5c5278"/>
 <rect x="344.6" y="174" width="26.7" height="18" fill="#4208A8"/>
 <text x="379.4" y="188" font-size="13" font-weight="700" fill="#111111">210</text>
+<rect x="6" y="207" width="178" height="18" fill="#4208A8" fill-opacity="0.55"/>
 <text x="184" y="220" text-anchor="end" font-size="13" fill="#111111">№19 Тюнево</text>
 <rect x="196.0" y="206" width="20.9" height="18" fill="#111111"/>
 <rect x="216.9" y="206" width="25.1" height="18" fill="#5c5278"/>
@@ -481,13 +496,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>№17 Луговое, Усольцева 2</td><td class="who">нет</td><td class="who">Шушарина Ольга<br>Ключка Евгений</td><td class="num">308</td><td class="num">59</td><td class="num">365</td><td class="num">732</td><td class="num">4,9 млн ₽</td><td class="num">11,4%</td></tr>
-          <tr><td>№5 Бабарынка, 10Б</td><td class="who">Подчувалов Денис<br>Шураков Дмитрий</td><td class="who">Катрич Константин</td><td class="num">153</td><td class="num">153</td><td class="num">113</td><td class="num">419</td><td class="num">4,2 млн ₽</td><td class="num">4,8%</td></tr>
-          <tr><td>№11 Березняки, Омутинская 26а</td><td class="who">Малеев Алексей</td><td class="who">Бергер Леонид</td><td class="num">98</td><td class="num">127</td><td class="num">153</td><td class="num">378</td><td class="num">4,9 млн ₽</td><td class="num">15,4%</td></tr>
-          <tr><td>№7 Ожогина, Садовая 1В</td><td class="who">нет</td><td class="who">Булатов Артем<br>Козлов Александр</td><td class="num">81</td><td class="num">90</td><td class="num">62</td><td class="num">233</td><td class="num">1,4 млн ₽</td><td class="num">14,9%</td></tr>
-          <tr><td>№10 Старый Тобольский тракт</td><td class="who">Яковлева Александра</td><td class="who">Никитина Юлия</td><td class="num">94</td><td class="num">41</td><td class="num">89</td><td class="num">224</td><td class="num">3,9 млн ₽</td><td class="num">3,2%</td></tr>
-          <tr><td>№2 Авторемонтная, 49</td><td class="who">Умарова Евдокия</td><td class="who">Кочкуркин Никита</td><td class="num">129</td><td class="num">49</td><td class="num">32</td><td class="num">210</td><td class="num">1,5 млн ₽</td><td class="num">2,9%</td></tr>
-          <tr><td>№19 Тюнево, Геологов 9</td><td class="who">нет</td><td class="who">Сердцова Мария</td><td class="num">25</td><td class="num">30</td><td class="num">153</td><td class="num">208</td><td class="num">1,0 млн ₽</td><td class="num">18,3%</td></tr>
+          <tr class="hot"><td>№17 Луговое, Усольцева 2</td><td class="who">нет</td><td class="who">Шушарина Ольга<br>Ключка Евгений</td><td class="num">308</td><td class="num">59</td><td class="num">365</td><td class="num">732</td><td class="num">4,9 млн ₽</td><td class="num">11,4%</td></tr>
+          <tr class="hot"><td>№5 Бабарынка, 10Б</td><td class="who">Подчувалов Денис<br>Шураков Дмитрий</td><td class="who">Катрич Константин</td><td class="num">153</td><td class="num">153</td><td class="num">113</td><td class="num">419</td><td class="num">4,2 млн ₽</td><td class="num">4,8%</td></tr>
+          <tr class="hot"><td>№11 Березняки, Омутинская 26а</td><td class="who">Малеев Алексей</td><td class="who">Бергер Леонид</td><td class="num">98</td><td class="num">127</td><td class="num">153</td><td class="num">378</td><td class="num">4,9 млн ₽</td><td class="num">15,4%</td></tr>
+          <tr class="hot"><td>№7 Ожогина, Садовая 1В</td><td class="who">нет</td><td class="who">Булатов Артем<br>Козлов Александр</td><td class="num">81</td><td class="num">90</td><td class="num">62</td><td class="num">233</td><td class="num">1,4 млн ₽</td><td class="num">14,9%</td></tr>
+          <tr class="hot"><td>№10 Старый Тобольский тракт</td><td class="who">Яковлева Александра</td><td class="who">Никитина Юлия</td><td class="num">94</td><td class="num">41</td><td class="num">89</td><td class="num">224</td><td class="num">3,9 млн ₽</td><td class="num">3,2%</td></tr>
+          <tr class="hot"><td>№2 Авторемонтная, 49</td><td class="who">Умарова Евдокия</td><td class="who">Кочкуркин Никита</td><td class="num">129</td><td class="num">49</td><td class="num">32</td><td class="num">210</td><td class="num">1,5 млн ₽</td><td class="num">2,9%</td></tr>
+          <tr class="hot"><td>№19 Тюнево, Геологов 9</td><td class="who">нет</td><td class="who">Сердцова Мария</td><td class="num">25</td><td class="num">30</td><td class="num">153</td><td class="num">208</td><td class="num">1,0 млн ₽</td><td class="num">18,3%</td></tr>
           <tr><td>№3 Республики, 256к5</td><td class="who">Строкина Дарья</td><td class="who">Строкина Дарья</td><td class="num">53</td><td class="num">36</td><td class="num">88</td><td class="num">177</td><td class="num">1,3 млн ₽</td><td class="num">3,7%</td></tr>
           <tr><td>№15 Московский тракт, 6 км</td><td class="who">нет</td><td class="who">Сарана Олег</td><td class="num">54</td><td class="num">24</td><td class="num">83</td><td class="num">161</td><td class="num">0,9 млн ₽</td><td class="num">4,3%</td></tr>
           <tr><td>№18 Решетникова, Свободы 12</td><td class="who">нет</td><td class="who">Конькова Валентина</td><td class="num">36</td><td class="num">61</td><td class="num">63</td><td class="num">160</td><td class="num">0,9 млн ₽</td><td class="num">20,4%</td></tr>
@@ -499,11 +514,11 @@
           <tr><td>№27 Ембаево, Бульварная 2А</td><td class="who">нет</td><td class="who">Вакарин Никита</td><td class="num">0</td><td class="num">0</td><td class="num">29</td><td class="num">29</td><td class="num">0,1 млн ₽</td><td class="num">12,8%</td></tr>
           <tr><td>№9 Червишево, Юбилейный квартал</td><td class="who">нет</td><td class="who">Бучельников Алексей<br>Топорищев Александр</td><td class="num">3</td><td class="num">3</td><td class="num">19</td><td class="num">25</td><td class="num">0,1 млн ₽</td><td class="num">10,8%</td></tr>
           <tr><td>№21 Успенка, Коммунаров 3а</td><td class="who">нет</td><td class="who">вакансия</td><td class="num">0</td><td class="num">11</td><td class="num">14</td><td class="num">25</td><td class="num">80 тыс. ₽</td><td class="num">22,1%</td></tr>
-          <tr><td>№26 Курган, Омская 171б</td><td class="who">нет</td><td class="who">Окуньков Алексей</td><td class="num">0</td><td class="num">0</td><td class="num">14</td><td class="num">14</td><td class="num">50 тыс. ₽</td><td class="num">12,1%</td></tr>
+          <tr><td>№26 Курган, Омская 171б</td><td class="who">нет</td><td class="who">Окуньков Алексей<br>Репина Анастасия</td><td class="num">0</td><td class="num">0</td><td class="num">14</td><td class="num">14</td><td class="num">50 тыс. ₽</td><td class="num">12,1%</td></tr>
           <tr><td>№24 Мальково, Юбилейная 8А</td><td class="who">нет</td><td class="who">Строкина Дарья</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td class="num">13</td><td class="num">0,1 млн ₽</td><td class="num">12,8%</td></tr>
           <tr><td>№20 Перевалово, Трактовая 44</td><td class="who">нет</td><td class="who">Егорова Ирина</td><td class="num">0</td><td class="num">5</td><td class="num">4</td><td class="num">9</td><td class="num">41 тыс. ₽</td><td class="num">6,5%</td></tr>
           <tr><td>№25 Ялуторовск, Щорса 41</td><td class="who">нет</td><td class="who">Головин Евгений</td><td class="num">0</td><td class="num">0</td><td class="num">6</td><td class="num">6</td><td class="num">18 тыс. ₽</td><td class="num">8,7%</td></tr>
-          <tr><td>№29 Курган, Утятская 12</td><td class="who">нет</td><td class="who">вакансия</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">3 тыс. ₽</td><td class="num">18,2%</td></tr>
+          <tr><td>№29 Курган, Утятская 12</td><td class="who">нет</td><td class="who">Зырянова Марина<br>Кубасов Руслан</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">3 тыс. ₽</td><td class="num">18,2%</td></tr>
           <tr><td>№30 Ушакова, Новая 16</td><td class="who">нет</td><td class="who">Суковатая Ольга</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td><td class="num">6,2%</td></tr>
           <tr><td>№28 Талица, Луначарского 62</td><td class="who">нет</td><td class="who">Вяткин Александр<br>Сидоров Максим</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0%</td></tr>
           <tr><td>№23 Кулига, Доломитовая 2</td><td class="who">нет</td><td class="who">вакансия</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0%</td></tr>
@@ -512,7 +527,7 @@
       </table>
     </div>
     <h2>Магазин и клиент</h2>
-    <p>Одна строка это пара: конкретный магазин и конкретный клиент. Сначала самые крупные пары. Дальше небольшие магазины: у каждого все клиенты, кто брал в выходной или праздник.</p>
+    <p>Одна строка это пара: конкретный магазин и конкретный клиент. Сначала самые крупные пары. Маркером отмечены те, у кого больше 20 отгрузок в выходные и праздники.</p>
     <div class="wrap">
       <table>
         <thead>
@@ -524,16 +539,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>№17 Луговое</td><td>ВЕВАНТА ООО</td><td class="num">0</td><td class="num">4</td><td class="num">176</td><td class="num">180</td><td class="num">0,6 млн ₽</td></tr>
-          <tr><td>№17 Луговое</td><td>НЕОСТРОЙ ООО</td><td class="num">30</td><td class="num">6</td><td class="num">43</td><td class="num">79</td><td class="num">0,4 млн ₽</td></tr>
-          <tr><td>№18 Решетникова</td><td>НЕОСТРОЙ ООО</td><td class="num">17</td><td class="num">24</td><td class="num">9</td><td class="num">50</td><td class="num">0,1 млн ₽</td></tr>
-          <tr><td>№17 Луговое</td><td>СК БИКАС ООО</td><td class="num">31</td><td class="num">3</td><td class="num">12</td><td class="num">46</td><td class="num">0,3 млн ₽</td></tr>
-          <tr><td>№17 Луговое</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">34</td><td class="num">34</td><td class="num">0,2 млн ₽</td></tr>
-          <tr><td>№19 Тюнево</td><td>ТЮМЕНЬКАПСТРОЙ ООО</td><td class="num">0</td><td class="num">6</td><td class="num">22</td><td class="num">28</td><td class="num">0,1 млн ₽</td></tr>
-          <tr><td>№11 Березняки</td><td>Нигматуллин Раиль Раисович ИП</td><td class="num">3</td><td class="num">10</td><td class="num">12</td><td class="num">25</td><td class="num">1,8 млн ₽</td></tr>
-          <tr><td>№18 Решетникова</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">2</td><td class="num">21</td><td class="num">23</td><td class="num">80 тыс. ₽</td></tr>
-          <tr><td>№19 Тюнево</td><td>Яровой Алексей Владимирович ИП</td><td class="num">0</td><td class="num">0</td><td class="num">23</td><td class="num">23</td><td class="num">65 тыс. ₽</td></tr>
-          <tr><td>№19 Тюнево</td><td>АСТАР-ГРУПП ООО</td><td class="num">7</td><td class="num">3</td><td class="num">13</td><td class="num">23</td><td class="num">58 тыс. ₽</td></tr>
+          <tr class="hot"><td>№17 Луговое</td><td>ВЕВАНТА ООО</td><td class="num">0</td><td class="num">4</td><td class="num">176</td><td class="num">180</td><td class="num">0,6 млн ₽</td></tr>
+          <tr class="hot"><td>№17 Луговое</td><td>НЕОСТРОЙ ООО</td><td class="num">30</td><td class="num">6</td><td class="num">43</td><td class="num">79</td><td class="num">0,4 млн ₽</td></tr>
+          <tr class="hot"><td>№18 Решетникова</td><td>НЕОСТРОЙ ООО</td><td class="num">17</td><td class="num">24</td><td class="num">9</td><td class="num">50</td><td class="num">0,1 млн ₽</td></tr>
+          <tr class="hot"><td>№17 Луговое</td><td>СК БИКАС ООО</td><td class="num">31</td><td class="num">3</td><td class="num">12</td><td class="num">46</td><td class="num">0,3 млн ₽</td></tr>
+          <tr class="hot"><td>№17 Луговое</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">34</td><td class="num">34</td><td class="num">0,2 млн ₽</td></tr>
+          <tr class="hot"><td>№19 Тюнево</td><td>ТЮМЕНЬКАПСТРОЙ ООО</td><td class="num">0</td><td class="num">6</td><td class="num">22</td><td class="num">28</td><td class="num">0,1 млн ₽</td></tr>
+          <tr class="hot"><td>№11 Березняки</td><td>Нигматуллин Раиль Раисович ИП</td><td class="num">3</td><td class="num">10</td><td class="num">12</td><td class="num">25</td><td class="num">1,8 млн ₽</td></tr>
+          <tr class="hot"><td>№18 Решетникова</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">2</td><td class="num">21</td><td class="num">23</td><td class="num">80 тыс. ₽</td></tr>
+          <tr class="hot"><td>№19 Тюнево</td><td>Яровой Алексей Владимирович ИП</td><td class="num">0</td><td class="num">0</td><td class="num">23</td><td class="num">23</td><td class="num">65 тыс. ₽</td></tr>
+          <tr class="hot"><td>№19 Тюнево</td><td>АСТАР-ГРУПП ООО</td><td class="num">7</td><td class="num">3</td><td class="num">13</td><td class="num">23</td><td class="num">58 тыс. ₽</td></tr>
           <tr><td>№17 Луговое</td><td>Карасёв Евгений Вячеславович ИП</td><td class="num">6</td><td class="num">1</td><td class="num">11</td><td class="num">18</td><td class="num">0,2 млн ₽</td></tr>
           <tr><td>№11 Березняки</td><td>Кунгуров Алексей Сергеевич ИП</td><td class="num">3</td><td class="num">7</td><td class="num">8</td><td class="num">18</td><td class="num">0,2 млн ₽</td></tr>
           <tr><td>№11 Березняки</td><td>АДА - ПЛЮС ООО</td><td class="num">3</td><td class="num">9</td><td class="num">6</td><td class="num">18</td><td class="num">0,1 млн ₽</td></tr>
