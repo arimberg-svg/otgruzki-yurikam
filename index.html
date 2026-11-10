@@ -28,6 +28,41 @@
       line-height: 1.5;
     }
     a { color: var(--violet); }
+    header.top {
+      background: var(--white);
+      border-bottom: 4px solid var(--violet);
+    }
+    .top-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 20px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header.top img {
+      display: block;
+      width: 280px;
+      height: auto;
+    }
+    .motto {
+      margin: 0;
+      color: var(--violet);
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .motto span {
+      display: block;
+      margin-top: 4px;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+    }
     main { max-width: 1120px; margin: 0 auto; padding: 28px 20px 72px; }
     h1, h2 {
       font-family: "Arial Black", Arial, sans-serif;
@@ -135,10 +170,17 @@
       .stats { grid-template-columns: 1fr 1fr; }
       .duo { grid-template-columns: 1fr; }
       h1 { font-size: 1.6rem; }
+      header.top img { width: 250px; }
     }
   </style>
 </head>
 <body>
+  <header class="top">
+    <div class="top-inner">
+      <img src="assets/logo.png" width="280" alt="У Михалыча" />
+      <p class="motto">Делаем мир крепче<span>Отгрузки юридическим лицам</span></p>
+    </div>
+  </header>
   <main>
     <p class="period">1 января – 31 октября, одинаково для 2024, 2025 и 2026</p>
     <h1>Кому отгружаем в выходные и праздники</h1>
