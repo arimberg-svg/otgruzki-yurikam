@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Отгрузки юрлицам в выходные и праздники</title>
+  <meta name="description" content="Сколько и каким юридическим лицам отгружали в субботу, воскресенье и праздники. 2024, 2025 и 2026 год, сеть «У Михалыча»." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#4208A8" />
+  <style>
+    :root {
+      --violet: #4208A8;
+      --gray: #CCCCCC;
+      --white: #FFFFFF;
+      --ink: #111111;
+      --muted: #5c5278;
+      --line: rgba(66, 8, 168, 0.16);
+      --soft: rgba(66, 8, 168, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+    a { color: var(--violet); }
+    header.top { background: #000000; color: var(--white); }
+    .top-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 20px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand img {
+      display: block;
+      width: 280px;
+      height: auto;
+      background: #000000;
+    }
+    .motto {
+      margin: 0;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+    .motto span {
+      display: block;
+      margin-top: 4px;
+      color: var(--gray);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 32px 20px 72px; }
+    h1, h2 {
+      font-family: "Arial Black", Arial, sans-serif;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    h1 { margin: 0 0 12px; font-size: 2rem; color: var(--violet); }
+    h2 { margin: 40px 0 10px; font-size: 1.45rem; color: var(--violet); }
+    .lead { max-width: 68ch; margin: 0 0 8px; }
+    .period { margin: 0 0 22px; color: var(--muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 8px 0 8px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 14px 14px 12px;
+    }
+    .stat b {
+      display: block;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      color: var(--violet);
+      line-height: 1.1;
+    }
+    .stat span { display: block; margin-top: 6px; font-size: 0.92rem; }
+    .note {
+      border-left: 4px solid var(--violet);
+      background: var(--soft);
+      padding: 12px 16px;
+      margin: 22px 0 8px;
+    }
+    .note p { margin: 0; }
+    figure { margin: 14px 0 6px; }
+    figure svg { width: 100%; height: auto; display: block; }
+    figcaption, .fine {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 8px;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+    }
+    .legend i {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: -2px;
+    }
+    .wrap { overflow-x: auto; margin-top: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--gray);
+      white-space: nowrap;
+    }
+    th {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      color: var(--violet);
+    }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.now td { background: var(--soft); }
+    footer {
+      border-top: 1px solid var(--gray);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .inner { max-width: 980px; margin: 0 auto; padding: 18px 20px 28px; }
+    @media (max-width: 800px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <img src="assets/logo.png" width="280" alt="У Михалыча" />
+      <p class="motto">Делаем мир крепче<span>Отгрузки юридическим лицам</span></p>
+    </div>
+  </header>
+  <main>
+    <p class="period">С 3 января 2024 по 9 ноября 2026</p>
+    <h1>Кому отгружаем в выходные и праздники</h1>
+    <p class="lead">С 1 января по 9 ноября 2026 года юридическим лицам оформили 1&nbsp;347 реализаций в субботу, воскресенье или праздник. За те же даты в 2025 году было 800, в 2024 году 1&nbsp;027. Это на 68% больше, чем год назад. Доля таких отгрузок среди всех отгрузок юрлицам выросла с 3,8% до 6,7%.</p>
+
+    <section class="stats" aria-label="Главные цифры">
+      <div class="stat"><b>1&nbsp;347</b><span>отгрузок с 1 января по 9 ноября 2026</span></div>
+      <div class="stat"><b>+68%</b><span>к тому же периоду 2025 года</span></div>
+      <div class="stat"><b>276</b><span>юрлиц с такой отгрузкой в 2026</span></div>
+      <div class="stat"><b>6,7%</b><span>доля всех отгрузок юрлицам в 2026</span></div>
+    </section>
+
+    <div class="note">
+      <p>Рост дали суббота и воскресенье. С 1 января по 9 ноября субботних отгрузок было 644 в 2024 году, 484 в 2025-м и 832 в 2026-м. Воскресных: 210, 154 и 374. Праздники в будни почти не сдвинулись: 99, 86 и 109. Чек такой отгрузки стал меньше: 11,3&nbsp;тыс.&nbsp;₽, затем 7,6&nbsp;тыс. и 6,7&nbsp;тыс.</p>
+    </div>
+
+    <h2>Один и тот же отрезок года</h2>
+    <p>2026 год в выгрузке заканчивается 9 ноября, поэтому сравниваем с 1 января по 9 ноября. Полные 2024 и 2025 годы стоят отдельными строками.</p>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Год</th><th>Период</th>
+            <th class="num">Отгрузок</th><th class="num">Сумма</th>
+            <th class="num">Юрлиц</th><th class="num">Доля</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>1 янв – 9 ноя</td><td class="num">1 027</td><td class="num">10,4 млн ₽</td><td class="num">242</td><td class="num">4,3%</td></tr>
+          <tr><td>2025</td><td>1 янв – 9 ноя</td><td class="num">800</td><td class="num">6,2 млн ₽</td><td class="num">230</td><td class="num">3,8%</td></tr>
+          <tr class="now"><td>2026</td><td>1 янв – 9 ноя</td><td class="num">1 347</td><td class="num">9,0 млн ₽</td><td class="num">276</td><td class="num">6,7%</td></tr>
+          <tr><td>2024</td><td>весь год</td><td class="num">1 140</td><td class="num">12,9 млн ₽</td><td class="num">268</td><td class="num">4,1%</td></tr>
+          <tr><td>2025</td><td>весь год</td><td class="num">954</td><td class="num">7,3 млн ₽</td><td class="num">253</td><td class="num">3,9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Доля считается от всех реализаций юрлицам за тот же период. Сумма как в документе.</p>
+
+    <h2>Из чего состоит нерабочий день</h2>
+    <p>Число реализаций с 1 января по 9 ноября. Если праздник попал на субботу или воскресенье, день учтён один раз, в выходном.</p>
+    <figure>
+      <svg viewBox="0 0 920 360" role="img" aria-label="Столбцы: суббота, воскресенье, праздник и перенос с 1 января по 9 ноября">
+<line x1="56" y1="312.0" x2="896" y2="312.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="46" y="316.0" text-anchor="end" font-size="13" fill="#5c5278">0</text>
+<line x1="56" y1="217.3" x2="896" y2="217.3" stroke="#CCCCCC" stroke-width="1"/>
+<text x="46" y="221.3" text-anchor="end" font-size="13" fill="#5c5278">500</text>
+<line x1="56" y1="122.7" x2="896" y2="122.7" stroke="#CCCCCC" stroke-width="1"/>
+<text x="46" y="126.7" text-anchor="end" font-size="13" fill="#5c5278">1000</text>
+<line x1="56" y1="28.0" x2="896" y2="28.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="46" y="32.0" text-anchor="end" font-size="13" fill="#5c5278">1500</text>
+<rect x="150.0" y="190.1" width="92" height="121.9" fill="#4208A8"/>
+<rect x="150.0" y="150.3" width="92" height="39.8" fill="#111111"/>
+<rect x="150.0" y="131.6" width="92" height="18.7" fill="#5c5278"/>
+<rect x="150.0" y="117.6" width="92" height="14.0" fill="#CCCCCC"/>
+<text x="196.0" y="109.6" text-anchor="middle" font-size="16" font-weight="700" fill="#111111">1027</text>
+<text x="196.0" y="340" text-anchor="middle" font-size="15" font-weight="700" fill="#111111">2024</text>
+<rect x="430.0" y="220.4" width="92" height="91.6" fill="#4208A8"/>
+<rect x="430.0" y="191.2" width="92" height="29.2" fill="#111111"/>
+<rect x="430.0" y="174.9" width="92" height="16.3" fill="#5c5278"/>
+<rect x="430.0" y="160.5" width="92" height="14.4" fill="#CCCCCC"/>
+<text x="476.0" y="152.5" text-anchor="middle" font-size="16" font-weight="700" fill="#111111">800</text>
+<text x="476.0" y="340" text-anchor="middle" font-size="15" font-weight="700" fill="#111111">2025</text>
+<rect x="710.0" y="154.5" width="92" height="157.5" fill="#4208A8"/>
+<rect x="710.0" y="83.7" width="92" height="70.8" fill="#111111"/>
+<rect x="710.0" y="63.0" width="92" height="20.6" fill="#5c5278"/>
+<rect x="710.0" y="57.0" width="92" height="6.1" fill="#CCCCCC"/>
+<text x="756.0" y="49.0" text-anchor="middle" font-size="16" font-weight="700" fill="#111111">1347</text>
+<text x="756.0" y="340" text-anchor="middle" font-size="15" font-weight="700" fill="#111111">2026</text>
+</svg>
+    </figure>
+    <div class="legend">
+      <span><i style="background:#4208A8"></i>Суббота</span>
+      <span><i style="background:#111111"></i>Воскресенье</span>
+      <span><i style="background:#5c5278"></i>Праздник в будний день</span>
+      <span><i style="background:#CCCCCC"></i>Перенесённый выходной</span>
+    </div>
+    <p class="fine">По вертикали число документов «Реализация». 2026 год на диаграмме тоже обрезан 9 ноября, как и два предыдущих.</p>
+
+    <h2>По месяцам, январь–октябрь</h2>
+    <p>Ноябрь на линии нет: в 2026 году он ещё не полный, по 9 ноября там 74 отгрузки. Декабрь в выгрузке не начался. Пик 2026 года приходится на август, 212 отгрузок.</p>
+    <figure>
+      <svg viewBox="0 0 920 360" role="img" aria-label="Линии отгрузок по месяцам, январь–октябрь, три года">
+<line x1="48" y1="316.0" x2="904" y2="316.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="40" y="320.0" text-anchor="end" font-size="13" fill="#5c5278">0</text>
+<line x1="48" y1="243.0" x2="904" y2="243.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="40" y="247.0" text-anchor="end" font-size="13" fill="#5c5278">60</text>
+<line x1="48" y1="170.0" x2="904" y2="170.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="40" y="174.0" text-anchor="end" font-size="13" fill="#5c5278">120</text>
+<line x1="48" y1="97.0" x2="904" y2="97.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="40" y="101.0" text-anchor="end" font-size="13" fill="#5c5278">180</text>
+<line x1="48" y1="24.0" x2="904" y2="24.0" stroke="#CCCCCC" stroke-width="1"/>
+<text x="40" y="28.0" text-anchor="end" font-size="13" fill="#5c5278">240</text>
+<polyline fill="none" stroke="#111111" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="48.0,247.9 143.1,229.6 238.2,215.0 333.3,178.5 428.4,176.1 523.6,120.1 618.7,227.2 713.8,174.9 808.9,167.6 904.0,230.8"/>
+<circle cx="48.0" cy="247.9" r="3.5" fill="#111111"/>
+<circle cx="143.1" cy="229.6" r="3.5" fill="#111111"/>
+<circle cx="238.2" cy="215.0" r="3.5" fill="#111111"/>
+<circle cx="333.3" cy="178.5" r="3.5" fill="#111111"/>
+<circle cx="428.4" cy="176.1" r="3.5" fill="#111111"/>
+<circle cx="523.6" cy="120.1" r="3.5" fill="#111111"/>
+<circle cx="618.7" cy="227.2" r="3.5" fill="#111111"/>
+<circle cx="713.8" cy="174.9" r="3.5" fill="#111111"/>
+<circle cx="808.9" cy="167.6" r="3.5" fill="#111111"/>
+<circle cx="904.0" cy="230.8" r="3.5" fill="#111111"/>
+<polyline fill="none" stroke="#5c5278" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="48.0,238.1 143.1,272.2 238.2,253.9 333.3,267.3 428.4,140.8 523.6,198.0 618.7,227.2 713.8,213.8 808.9,246.7 904.0,216.2"/>
+<circle cx="48.0" cy="238.1" r="3.5" fill="#5c5278"/>
+<circle cx="143.1" cy="272.2" r="3.5" fill="#5c5278"/>
+<circle cx="238.2" cy="253.9" r="3.5" fill="#5c5278"/>
+<circle cx="333.3" cy="267.3" r="3.5" fill="#5c5278"/>
+<circle cx="428.4" cy="140.8" r="3.5" fill="#5c5278"/>
+<circle cx="523.6" cy="198.0" r="3.5" fill="#5c5278"/>
+<circle cx="618.7" cy="227.2" r="3.5" fill="#5c5278"/>
+<circle cx="713.8" cy="213.8" r="3.5" fill="#5c5278"/>
+<circle cx="808.9" cy="246.7" r="3.5" fill="#5c5278"/>
+<circle cx="904.0" cy="216.2" r="3.5" fill="#5c5278"/>
+<polyline fill="none" stroke="#4208A8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" points="48.0,151.8 143.1,267.3 238.2,244.2 333.3,241.8 428.4,127.4 523.6,116.5 618.7,150.5 713.8,58.1 808.9,116.5 904.0,137.1"/>
+<circle cx="48.0" cy="151.8" r="3.5" fill="#4208A8"/>
+<circle cx="143.1" cy="267.3" r="3.5" fill="#4208A8"/>
+<circle cx="238.2" cy="244.2" r="3.5" fill="#4208A8"/>
+<circle cx="333.3" cy="241.8" r="3.5" fill="#4208A8"/>
+<circle cx="428.4" cy="127.4" r="3.5" fill="#4208A8"/>
+<circle cx="523.6" cy="116.5" r="3.5" fill="#4208A8"/>
+<circle cx="618.7" cy="150.5" r="3.5" fill="#4208A8"/>
+<circle cx="713.8" cy="58.1" r="3.5" fill="#4208A8"/>
+<circle cx="808.9" cy="116.5" r="3.5" fill="#4208A8"/>
+<circle cx="904.0" cy="137.1" r="3.5" fill="#4208A8"/>
+<text x="48.0" y="342" text-anchor="middle" font-size="13" fill="#5c5278">янв</text>
+<text x="143.1" y="342" text-anchor="middle" font-size="13" fill="#5c5278">фев</text>
+<text x="238.2" y="342" text-anchor="middle" font-size="13" fill="#5c5278">мар</text>
+<text x="333.3" y="342" text-anchor="middle" font-size="13" fill="#5c5278">апр</text>
+<text x="428.4" y="342" text-anchor="middle" font-size="13" fill="#5c5278">май</text>
+<text x="523.6" y="342" text-anchor="middle" font-size="13" fill="#5c5278">июн</text>
+<text x="618.7" y="342" text-anchor="middle" font-size="13" fill="#5c5278">июл</text>
+<text x="713.8" y="342" text-anchor="middle" font-size="13" fill="#5c5278">авг</text>
+<text x="808.9" y="342" text-anchor="middle" font-size="13" fill="#5c5278">сен</text>
+<text x="904.0" y="342" text-anchor="middle" font-size="13" fill="#5c5278">окт</text>
+</svg>
+    </figure>
+    <div class="legend">
+      <span><i style="background:#111111"></i>2024</span>
+      <span><i style="background:#5c5278"></i>2025</span>
+      <span><i style="background:#4208A8"></i>2026</span>
+    </div>
+    <p class="fine">По вертикали число реализаций юрлицам в нерабочие дни.</p>
+
+    <h2>Магазины</h2>
+    <p>Больше всего таких отгрузок у магазина №17 в Луговом: 660 за три года. В 2025 году там был провал, 66 отгрузок, а за неполный 2026 уже 314. На втором месте №5 на Бабарынке, 440 отгрузок. По сумме он крупнее: 4,3 млн ₽ против 3,3 млн у №17.</p>
+    <figure>
+      <svg viewBox="0 0 920 440" role="img" aria-label="Магазины: отгрузки в нерабочие дни по годам">
+<text x="176" y="30" text-anchor="end" font-size="15" fill="#111111">№17 Луговое</text>
+<rect x="188.0" y="14" width="280.8" height="26" fill="#111111"/>
+<rect x="468.8" y="14" width="66.2" height="26" fill="#5c5278"/>
+<rect x="535.0" y="14" width="315.0" height="26" fill="#4208A8"/>
+<text x="858.0" y="32" font-size="14" font-weight="700" fill="#111111">660</text>
+<text x="176" y="78" text-anchor="end" font-size="15" fill="#111111">№5 Бабарынка</text>
+<rect x="188.0" y="62" width="156.5" height="26" fill="#111111"/>
+<rect x="344.5" y="62" width="181.5" height="26" fill="#5c5278"/>
+<rect x="526.0" y="62" width="103.3" height="26" fill="#4208A8"/>
+<text x="637.3" y="80" font-size="14" font-weight="700" fill="#111111">440</text>
+<text x="176" y="126" text-anchor="end" font-size="15" fill="#111111">№7 Ожогина</text>
+<rect x="188.0" y="110" width="76.2" height="26" fill="#111111"/>
+<rect x="264.2" y="110" width="107.3" height="26" fill="#5c5278"/>
+<rect x="371.6" y="110" width="59.2" height="26" fill="#4208A8"/>
+<text x="438.7" y="128" font-size="14" font-weight="700" fill="#111111">242</text>
+<text x="176" y="174" text-anchor="end" font-size="15" fill="#111111">№2 Авторемонтная</text>
+<rect x="188.0" y="158" width="142.4" height="26" fill="#111111"/>
+<rect x="330.4" y="158" width="44.1" height="26" fill="#5c5278"/>
+<rect x="374.6" y="158" width="33.1" height="26" fill="#4208A8"/>
+<text x="415.7" y="176" font-size="14" font-weight="700" fill="#111111">219</text>
+<text x="176" y="222" text-anchor="end" font-size="15" fill="#111111">№11 Березняки</text>
+<rect x="188.0" y="206" width="49.1" height="26" fill="#111111"/>
+<rect x="237.1" y="206" width="78.2" height="26" fill="#5c5278"/>
+<rect x="315.4" y="206" width="87.3" height="26" fill="#4208A8"/>
+<text x="410.6" y="224" font-size="14" font-weight="700" fill="#111111">214</text>
+<text x="176" y="270" text-anchor="end" font-size="15" fill="#111111">№10 Тобольский тракт</text>
+<rect x="188.0" y="254" width="75.2" height="26" fill="#111111"/>
+<rect x="263.2" y="254" width="39.1" height="26" fill="#5c5278"/>
+<rect x="302.3" y="254" width="97.3" height="26" fill="#4208A8"/>
+<text x="407.6" y="272" font-size="14" font-weight="700" fill="#111111">211</text>
+<text x="176" y="318" text-anchor="end" font-size="15" fill="#111111">№3 Республики</text>
+<rect x="188.0" y="302" width="56.2" height="26" fill="#111111"/>
+<rect x="244.2" y="302" width="42.1" height="26" fill="#5c5278"/>
+<rect x="286.3" y="302" width="83.3" height="26" fill="#4208A8"/>
+<text x="377.5" y="320" font-size="14" font-weight="700" fill="#111111">181</text>
+<text x="176" y="366" text-anchor="end" font-size="15" fill="#111111">№18 Решетникова</text>
+<rect x="188.0" y="350" width="43.1" height="26" fill="#111111"/>
+<rect x="231.1" y="350" width="65.2" height="26" fill="#5c5278"/>
+<rect x="296.3" y="350" width="54.2" height="26" fill="#4208A8"/>
+<text x="358.5" y="368" font-size="14" font-weight="700" fill="#111111">162</text>
+</svg>
+    </figure>
+    <div class="legend">
+      <span><i style="background:#111111"></i>2024</span>
+      <span><i style="background:#5c5278"></i>2025</span>
+      <span><i style="background:#4208A8"></i>2026, по 9 ноября</span>
+    </div>
+    <p class="fine">Длина полосы показывает число реализаций. На диаграмме восемь магазинов с наибольшим итогом.</p>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Магазин</th>
+            <th class="num">2024</th><th class="num">2025</th><th class="num">2026</th>
+            <th class="num">Всего</th><th class="num">Сумма</th><th class="num">Доля</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>№17 Луговое, Усольцева 2</td><td class="num">280</td><td class="num">66</td><td class="num">314</td><td class="num">660</td><td class="num">3,3 млн ₽</td><td class="num">10,7%</td></tr>
+          <tr><td>№5 Бабарынка, 10Б</td><td class="num">156</td><td class="num">181</td><td class="num">103</td><td class="num">440</td><td class="num">4,3 млн ₽</td><td class="num">4,9%</td></tr>
+          <tr><td>№7 Ожогина, Садовая 1В</td><td class="num">76</td><td class="num">107</td><td class="num">59</td><td class="num">242</td><td class="num">1,4 млн ₽</td><td class="num">14,3%</td></tr>
+          <tr><td>№2 Авторемонтная, 49</td><td class="num">142</td><td class="num">44</td><td class="num">33</td><td class="num">219</td><td class="num">1,5 млн ₽</td><td class="num">3,1%</td></tr>
+          <tr><td>№11 Березняки, Омутинская 26а</td><td class="num">49</td><td class="num">78</td><td class="num">87</td><td class="num">214</td><td class="num">1,2 млн ₽</td><td class="num">13,1%</td></tr>
+          <tr><td>№10 Старый Тобольский тракт</td><td class="num">75</td><td class="num">39</td><td class="num">97</td><td class="num">211</td><td class="num">2,3 млн ₽</td><td class="num">3,0%</td></tr>
+          <tr><td>№3 Республики, 256к5</td><td class="num">56</td><td class="num">42</td><td class="num">83</td><td class="num">181</td><td class="num">1,2 млн ₽</td><td class="num">3,7%</td></tr>
+          <tr><td>№18 Решетникова, Свободы 12</td><td class="num">43</td><td class="num">65</td><td class="num">54</td><td class="num">162</td><td class="num">0,9 млн ₽</td><td class="num">20,3%</td></tr>
+          <tr><td>№19 Тюнево, Геологов 9</td><td class="num">26</td><td class="num">45</td><td class="num">86</td><td class="num">157</td><td class="num">0,7 млн ₽</td><td class="num">19,9%</td></tr>
+          <tr><td>№4 Московский тракт, 120А</td><td class="num">31</td><td class="num">95</td><td class="num">21</td><td class="num">147</td><td class="num">1,4 млн ₽</td><td class="num">7,4%</td></tr>
+          <tr><td>№15 Московский тракт, 6 км</td><td class="num">56</td><td class="num">25</td><td class="num">65</td><td class="num">146</td><td class="num">0,9 млн ₽</td><td class="num">4,5%</td></tr>
+          <tr><td>№1 Дружбы, 66</td><td class="num">0</td><td class="num">41</td><td class="num">83</td><td class="num">124</td><td class="num">0,9 млн ₽</td><td class="num">16,5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Доля показывает, сколько нерабочих дней среди всех отгрузок юрлицам этого магазина. 2026 год по 9 ноября. Склады вроде «Основные склады» в список магазинов не ставил: там 108 таких отгрузок за три года.</p>
+
+    <h2>Юридические лица</h2>
+    <p>За три года хотя бы одна такая отгрузка была у 541 юридического лица из 2&nbsp;562, которым вообще отгружали. Вверху списка клиенты магазина №17. НЕОСТРОЙ и ИНЖЕНЕР+ держали 2024 год. В 2026-м на их место встали ВЕВАНТА, 181 отгрузка, и ГУД ХАУС, 98. По сумме из этой группы выделяется СК ОСНОВА: 36 отгрузок на 2,2 млн ₽.</p>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Юрлицо</th>
+            <th class="num">2024</th><th class="num">2025</th><th class="num">2026</th>
+            <th class="num">Всего</th><th class="num">Сумма</th><th class="num">Доля</th><th>Магазин</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>НЕОСТРОЙ ООО</td><td class="num">157</td><td class="num">57</td><td class="num">79</td><td class="num">293</td><td class="num">1,1 млн ₽</td><td class="num">13,7%</td><td>№17</td></tr>
+          <tr><td>ИНЖЕНЕР+ ООО</td><td class="num">174</td><td class="num">31</td><td class="num">1</td><td class="num">206</td><td class="num">480 тыс. ₽</td><td class="num">6,5%</td><td>№17</td></tr>
+          <tr><td>ВЕВАНТА ООО</td><td class="num">0</td><td class="num">22</td><td class="num">181</td><td class="num">203</td><td class="num">676 тыс. ₽</td><td class="num">14,5%</td><td>№17</td></tr>
+          <tr><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">12</td><td class="num">98</td><td class="num">110</td><td class="num">521 тыс. ₽</td><td class="num">17,4%</td><td>№17</td></tr>
+          <tr><td>СК БИКАС ООО</td><td class="num">45</td><td class="num">16</td><td class="num">17</td><td class="num">78</td><td class="num">372 тыс. ₽</td><td class="num">13,9%</td><td>№17</td></tr>
+          <tr><td>АСТАР-ГРУПП ООО</td><td class="num">12</td><td class="num">22</td><td class="num">37</td><td class="num">71</td><td class="num">265 тыс. ₽</td><td class="num">10,5%</td><td>№19</td></tr>
+          <tr><td>ГИДРОТЕХ-К ООО</td><td class="num">17</td><td class="num">11</td><td class="num">29</td><td class="num">57</td><td class="num">234 тыс. ₽</td><td class="num">5,7%</td><td>№5</td></tr>
+          <tr><td>АРМАДА ООО</td><td class="num">7</td><td class="num">13</td><td class="num">30</td><td class="num">50</td><td class="num">402 тыс. ₽</td><td class="num">14,5%</td><td>№3</td></tr>
+          <tr><td>ТЮМЕНЬКАПСТРОЙ ООО</td><td class="num">0</td><td class="num">23</td><td class="num">23</td><td class="num">46</td><td class="num">293 тыс. ₽</td><td class="num">33,8%</td><td>№19</td></tr>
+          <tr><td>ТЮМЕНПОЛИМЕРГАЗ</td><td class="num">20</td><td class="num">12</td><td class="num">11</td><td class="num">43</td><td class="num">101 тыс. ₽</td><td class="num">6,1%</td><td>№7</td></tr>
+          <tr><td>ПРОМПОЛТЮМЕНЬ ООО СК</td><td class="num">7</td><td class="num">19</td><td class="num">16</td><td class="num">42</td><td class="num">349 тыс. ₽</td><td class="num">11,2%</td><td>№5</td></tr>
+          <tr><td>СК ОСНОВА ООО</td><td class="num">20</td><td class="num">9</td><td class="num">7</td><td class="num">36</td><td class="num">2,2 млн ₽</td><td class="num">7,4%</td><td>№5</td></tr>
+          <tr><td>КОМИТЕТ ООО</td><td class="num">18</td><td class="num">11</td><td class="num">7</td><td class="num">36</td><td class="num">108 тыс. ₽</td><td class="num">3,8%</td><td>№5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Доля показывает нерабочие дни среди всех отгрузок этому юрлицу. Магазин тот, где таких отгрузок было больше всего. Пометки «ЭДО» и служебные комментарии из названия убраны.</p>
+
+    <h2>ИП отдельно</h2>
+    <p>ИП в таблицы выше не входили. С 1 января по 9 ноября таких отгрузок у них было 183 в 2024 году, 169 в 2025-м и 328 в 2026-м. Сильнее всего прибавил Новопашин Иван Владиславович.</p>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ИП</th>
+            <th class="num">2024</th><th class="num">2025</th><th class="num">2026</th><th class="num">Всего</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Новопашин Иван Владиславович</td><td class="num">8</td><td class="num">15</td><td class="num">43</td><td class="num">66</td></tr>
+          <tr><td>Нигматуллин Раиль Раисович</td><td class="num">4</td><td class="num">16</td><td class="num">12</td><td class="num">32</td></tr>
+          <tr><td>Яровой Алексей Владимирович</td><td class="num">1</td><td class="num">3</td><td class="num">24</td><td class="num">28</td></tr>
+          <tr><td>Карасёв Евгений Вячеславович</td><td class="num">9</td><td class="num">3</td><td class="num">15</td><td class="num">27</td></tr>
+          <tr><td>Кунгуров Алексей Сергеевич</td><td class="num">4</td><td class="num">9</td><td class="num">13</td><td class="num">26</td></tr>
+          <tr><td>Севоян Сюзанна Саркисовна</td><td class="num">0</td><td class="num">0</td><td class="num">19</td><td class="num">19</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Как считали</h2>
+    <p>Нерабочий день: суббота и воскресенье, праздники 1–8 января, 23 февраля, 8 марта, 1 и 9 мая, 12 июня, 4 ноября, плюс дополнительные выходные по постановлениям Правительства. Рабочие субботы по переносу выходными не считал: 27 апреля, 2 ноября и 28 декабря 2024 года и 1 ноября 2025 года. В эти четыре дня у юрлиц было ещё 326 реализаций.</p>
+    <p>В счёт вошёл только документ «Реализация». Передачу на комиссию не включал: это почти целиком Озон и Яндекс, 27 тысяч документов. Физлица отсечены. Источник: файл «все реализации 2024-2025-2026».</p>
+  </main>
+  <footer>
+    <div class="inner">Сеть «У Михалыча». Страница для внутренней работы, в поиск не отдаётся.</div>
+  </footer>
+</body>
+</html>
