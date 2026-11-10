@@ -30,7 +30,7 @@
     a { color: var(--violet); }
     header.top { background: #000000; color: var(--white); }
     .top-inner {
-      max-width: 980px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 22px 20px 18px;
       display: flex;
@@ -60,7 +60,7 @@
       font-size: 0.95rem;
       letter-spacing: 0;
     }
-    main { max-width: 980px; margin: 0 auto; padding: 32px 20px 72px; }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 72px; }
     h1, h2 {
       font-family: "Arial Black", Arial, sans-serif;
       letter-spacing: -0.03em;
@@ -122,18 +122,16 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 640px;
       font-size: 0.95rem;
     }
     th, td {
       text-align: left;
       padding: 8px 10px;
       border-bottom: 1px solid var(--gray);
-      white-space: nowrap;
+      white-space: normal;
+      vertical-align: top;
     }
     td.who {
-      white-space: normal;
-      min-width: 190px;
       line-height: 1.35;
     }
     th {
@@ -142,14 +140,14 @@
       letter-spacing: 0.02em;
       color: var(--violet);
     }
-    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
     tr.now td { background: var(--soft); }
     footer {
       border-top: 1px solid var(--gray);
       color: var(--muted);
       font-size: 0.9rem;
     }
-    footer .inner { max-width: 980px; margin: 0 auto; padding: 18px 20px 28px; }
+    footer .inner { max-width: 1120px; margin: 0 auto; padding: 18px 20px 28px; }
     .duo {
       display: grid;
       grid-template-columns: 1.4fr 0.9fr;
@@ -486,7 +484,6 @@
       <span><i style="background:#4208A8"></i>2026, январь–октябрь</span>
     </div>
     <p class="fine">Длина полосы показывает число реализаций. На диаграмме все магазины, где за январь–октябрь была хотя бы одна такая отгрузка.</p>
-    <p>Рядом с цифрами видно, кто ведёт клиентов и кто СПК. В Луговом менеджера нет. СПК там Шушарина Ольга и Ключка Евгений.</p>
     <div class="wrap">
       <table>
         <thead>
@@ -531,10 +528,8 @@
         </tbody>
       </table>
     </div>
-    <p class="fine">Доля показывает, сколько нерабочих дней среди всех отгрузок юрлицам и ИП этого магазина. Период: январь–октябрь. Имена без отчеств. Магазин №4 на Московском тракте, 120А закрыт, его в таблице нет. В Березняках СПК Бергер Леонид. В Луговом менеджера нет, СПК Шушарина Ольга и Ключка Евгений. На Авторемонтной СПК Кочкуркин Никита.</p>
-
     <h2>Магазин и клиент</h2>
-    <p>Одна строка это пара: конкретный магазин и конкретный клиент. НЕОСТРОЙ, например, грузится не в одном месте, поэтому он стоит несколькими строками. Вверху пары магазина №17. ИНЖЕНЕР+ почти весь в 2024 году, ВЕВАНТА почти вся в 2026-м.</p>
+    <p>Одна строка это пара: конкретный магазин и конкретный клиент. Сначала самые крупные пары. Дальше небольшие магазины: у каждого все клиенты, кто брал в выходной или праздник.</p>
     <div class="wrap">
       <table>
         <thead>
@@ -566,10 +561,207 @@
           <tr><td>№17 Луговое</td><td>Карасёв Евгений Вячеславович ИП</td><td class="num">6</td><td class="num">1</td><td class="num">11</td><td class="num">18</td><td class="num">213 тыс. ₽</td></tr>
           <tr><td>№11 Березняки</td><td>Кунгуров Алексей Сергеевич ИП</td><td class="num">3</td><td class="num">7</td><td class="num">8</td><td class="num">18</td><td class="num">157 тыс. ₽</td></tr>
           <tr><td>№11 Березняки</td><td>АДА - ПЛЮС ООО</td><td class="num">3</td><td class="num">9</td><td class="num">6</td><td class="num">18</td><td class="num">110 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ЗАПСИБМОДУЛЬ ООО</td><td class="num">8</td><td class="num">1</td><td class="num">1</td><td class="num">10</td><td class="num">192 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ЗЖБИРОТОР ООО</td><td class="num">2</td><td class="num">3</td><td class="num">1</td><td class="num">6</td><td class="num">120 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ТНПО ООО</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td class="num">31 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ТОР ООО ИНН</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">4</td><td class="num">28 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>СИБЭККО ООО</td><td class="num">3</td><td class="num">0</td><td class="num">1</td><td class="num">4</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ООО СК ОСНОВА</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>АРГОГРИН ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">53 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ООО &#x27;&#x27;ТЮМЕНЬНЕРУД&#x27;&#x27;</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">18 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>АРГОПЛАСТ ООО</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">8 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ОКПБ ГБУЗ ТО</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>Умрихин Виктор Михайлович</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ФОНД РКМНС</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">22 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>Паршин Олег Александрович ИП</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">18 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>Вагин Кирилл Алексеевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">16 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>АРИМАКС ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">15 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>СТРОЙИНВЕСТДИЗАЙН ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">13 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>СТРОЙТЕХНИКА ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>Долганов Алексей Валериевич ИП АРД</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">8 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>УРАЛ ГЕО ГРУПП ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">8 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>ВОСХОД ООО (УЛЫБКА)</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>СИБХОЛОД ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">6 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>АКРИЛИКА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>НПО ПРОМТЭКО ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>АКВИЛОН ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">950 ₽</td></tr>
+          <tr><td>№13 Винзили</td><td>Близин Владимир Валентинович ИП</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">169 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td class="num">5</td><td class="num">21 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>НЕОСТРОЙ ООО</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">4</td><td class="num">27 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>СМУ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">19 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>АРМАДА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Хакназаров Кимёназар Юлдошевич ИП</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Ягодина Людмила Ивановна</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">23 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Степанчук Виктор Владимирович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">15 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Рафикова Гульнара</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">15 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Халидуллина Лариса Тимирхановна</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Рахимова Лилия Юрьевна</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">10 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Кунгуров Алексей Сергеевич ИП</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Марьин Сергей</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">8 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Фозилов Мохиржон Бойиржонович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Новопашин Иван Владиславович ИП</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ЮНИТ-ПРО ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Фролов Александр Александрович</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>КОНТРОНИК ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Вяткин Валерий Витальевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Квинт Богдан Богданович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ЛИДЕР72 ООО / ЭДО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Перепенда Александр</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Утемов Евгений Алексеевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Парыгин Александр</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ВИСТЭК ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ТОК ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Соловьев Владимир Константинович</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Насриянов Андрей</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>ХИМ-ПРОФ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Лелекова Ирина Юрьевна</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Мамедов Заур Фирдосьевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Яцурик Виктор Григорьевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Петренко Светлана</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Черкасов Игорь</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">840 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Глазырин Игорь</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">790 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Мавлютов Дмитрий</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">762 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Шумайлов Денис</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">645 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Петренко Павел Федорович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">380 ₽</td></tr>
+          <tr><td>№9 Червишево</td><td>Дядченко Николай</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">137 ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>Шилоносов Андрей Викторович ИП</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td class="num">5</td><td class="num">101 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ТРАНСМАШ ООО</td><td class="num">1</td><td class="num">3</td><td class="num">1</td><td class="num">5</td><td class="num">21 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ПЕТРОГРАД ООО</td><td class="num">0</td><td class="num">1</td><td class="num">4</td><td class="num">5</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>СГ СЕВЕР АО</td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">20 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>БЕТОННЫЙ ЗАВОД ГОРОД ООО</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">12 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>Станкевич Евгений Николаевич ИП</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">6 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ТРИАНТ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>Захарченко Юрий Николаевич ИП</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ТПК ГАЗ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>СИБИРЬ-ТРАНСЭН ООО</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>АЛЬФА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">35 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ООО &#x27;&#x27;ТЮМЕНЬНЕРУД&#x27;&#x27;</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">20 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ЦКД РОДОНИТ ТМО МАУ</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>МАНУЛ ООО ТК</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">6 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>МПК ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>УРАЛ ГЕО ГРУПП ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>АРС-ПРОМ КУРГАН ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>СТАРТАВТО ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>НАДЕЖДА ООО КК</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ТФКК ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ПКФ 72 ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>ТПК ТРЕЙД ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">875 ₽</td></tr>
+          <tr><td>№14 Боровский</td><td>НИК УНИВЕРСАЛ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">730 ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>КОМИТЕТ ООО</td><td class="num">3</td><td class="num">3</td><td class="num">1</td><td class="num">7</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СТРОЙКАПИТАЛ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">6 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СОВРЕМЕННЫЕ ТЕХНОЛОГИИ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>АСТАР-ГРУПП ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">14 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ОДООЛ ОСТРОВ ДЕТСТВА АНО</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">12 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СДЭК-ЦЕНТР ЛОГИСТИК ООО</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СБИ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">280 ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ВОЗРОЖДЕНИЕ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">92 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ЗОЛОТЫЕ СЛОНЫ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">87 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СИРИУС ООО СК</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">40 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>РОМАКС ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">34 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СИБИРЬПРОМСТРОЙ ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ДАУДЕЛЬ ООО УК</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>НЕ использовать! Розничный покупатель</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">6 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>Бусыгин Александр Евгеньевич ИП</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ПАРТНЕРСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>Светил Анатолий Владимирович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>ФОНД ЗАО ХК</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>АЛТЫН-АГРО ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>СТК ПЕРСПЕКТИВА ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>АРМАДА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">380 ₽</td></tr>
+          <tr><td>№6 Сантехника</td><td>МАСКАТ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">264 ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>СК-ПРОМСТРОЙ ООО</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">33 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ГЛОБАЛСТРОЙСЕРВИС ООО</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">27 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>Шилоносов Андрей Викторович ИП</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">66 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ООО &#x27;&#x27;ТЮМЕНЬНЕРУД&#x27;&#x27;</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">26 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ПСК ООО</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">21 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ПЕТРОГРАД ООО</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">12 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>НЕОСТРОЙ ООО</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>НИКИТА ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">148 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>УРАЛ-РЕГИОН ЛС ООО СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">115 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>КОНЦЕПТ МЕБЕЛЬ ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">114 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>Петров Олег Владимирович ИП</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">47 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>Гисс Ирина Олеговна ИП</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ДОМОДЕЛОВО ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>БЕТОННЫЙ ЗАВОД ГОРОД ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">10 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>Верхозин Дмитрий Александрович ИП</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>Гребенкина Татьяна Васильевна ИП</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>СИБИРЬПРОМСТРОЙ ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ИП Казаров В.В</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>СК СИБСТРОЙГРАД ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ТПК ТРЕЙД ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">764 ₽</td></tr>
+          <tr><td>№8 Сибирская</td><td>ИНЖЕНЕРНО-СТРОИТЕЛЬНЫЙ ЦЕНТР ООО</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">616 ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>АГРО-СИБ-АЛЬЯНС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">8</td><td class="num">8</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td class="num">5</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">18 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>МПК СТРОЙМОНТАЖ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>Кунгуров Алексей Сергеевич ИП</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">30 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>КОЯШ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>СТРОЙ СТАР ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">13 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>АРМАДА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>МПК СТАЛЬ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>Глазырин Иван Викторович ИП</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№27 Ембаево</td><td>ТМК ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Неклеенко Антон Николаевич ИП</td><td class="num">0</td><td class="num">0</td><td class="num">7</td><td class="num">7</td><td class="num">25 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>СИТИСЕРВИС ООО</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">4</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>ЭКОСТРОЙ ООО</td><td class="num">0</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>ВЕКТОР ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">28 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Ли Чжунцюнь ИП</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Чебогсинов Руслан Сергеевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">18 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Деменьтьева Роза Ивановна</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">10 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Бабак Илья Иванович</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>СВАРСЕРВИС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>ВЕВАНТА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>Архипов Артем Александрович ИП</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>ВОСХОД АО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">750 ₽</td></tr>
+          <tr><td>№21 Успенка</td><td>ВОСХОД ООО (УЛЫБКА)</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">187 ₽</td></tr>
+          <tr><td>№28 Талица</td><td>Кузьмич Степан</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td class="num">13</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№28 Талица</td><td>Сидоров Максим</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>РАССВЕТ КФХ</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">39 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>МОЙ ДОМ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">37 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>Исоматов Иноят</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">22 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>Аминова Нурания Каримовна ИП</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>АМАКОН ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">9 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>ФЕРРУМ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">8 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>Гольнев Сергей</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>СИБИРЬКОТЛОСЕРВИС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>НОВОКСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>ЭВЕНТУМ СК ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>ТЮМЕНПОЛИМЕРГАЗ</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№24 Мальково</td><td>ТПК ТЕСЛА ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">600 ₽</td></tr>
+          <tr><td>№26 Курган</td><td>НИВЕЛПРОМ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">14 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>ТИТАН ООО</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>СМС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>МАСТЕР-СОФТ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">19 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>СК СТРОЙРЕСТ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>СТРОЙКОМПЛЕКТ 72 ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1 тыс. ₽</td></tr>
+          <tr><td>№26 Курган</td><td>Рогожин Михаил</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">745 ₽</td></tr>
+          <tr><td>№22 Ворошилова</td><td>ТЮМЕНЬ ВОДОКАНАЛ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">8</td><td class="num">8</td><td class="num">127 тыс. ₽</td></tr>
+          <tr><td>№22 Ворошилова</td><td>РЕНЕССАНС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">13 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>ТЮМЕНСКИЙ ООО ЖБК</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>ГУД ХАУС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">13 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>ТЕСАМ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">11 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>Архипов Артем Александрович ИП</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>НФС ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">4 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>АИС-ГРУПП ООО</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№20 Перевалово</td><td>ТПК ГАЗ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">400 ₽</td></tr>
+          <tr><td>№25 Щорса</td><td>РЕНЕССАНС ООО</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">7 тыс. ₽</td></tr>
+          <tr><td>№25 Щорса</td><td>Кунгуров Алексей Сергеевич ИП</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№25 Щорса</td><td>ОС АЛЬФАСНАБ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№25 Щорса</td><td>ЗПО ЯЛУТОРОВСКИЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№30 Ушакова</td><td>Патракеев Сергей федорович</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">5 тыс. ₽</td></tr>
+          <tr><td>№30 Ушакова</td><td>НЕОСТРОЙ ООО</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">2 тыс. ₽</td></tr>
+          <tr><td>№29 Утятская</td><td>ИП Цветков Евгений Игоревич</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">3 тыс. ₽</td></tr>
+          <tr><td>№29 Утятская</td><td>Князев Роман Михайлович</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">969 ₽</td></tr>
+          <tr><td>№29 Утятская</td><td>Мироминов Фархат Шухруллоевич</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">530 ₽</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="fine">Двадцать пар с наибольшим числом таких отгрузок. Сумма за январь–октябрь трёх лет. ИП в этой таблице вместе с юрлицами.</p>
+    <p class="fine">Сумма за январь–октябрь трёх лет. ИП в этой таблице вместе с юрлицами.</p>
 
     <h2>Как считали</h2>
     <p>Нерабочий день: суббота и воскресенье, праздники 1–8 января, 23 февраля, 8 марта, 1 и 9 мая, 12 июня, 4 ноября, плюс дополнительные выходные по постановлениям Правительства. Рабочую субботу 27 апреля 2024 года выходной не считал: в этот день было 152 реализации.</p>
