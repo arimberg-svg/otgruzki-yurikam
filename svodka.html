@@ -115,8 +115,34 @@
     .fill { display: block; height: 16px; min-width: 6px; background: var(--violet); }
     .bar .num { font-family: "Arial Black", Arial, sans-serif; text-align: right; font-size: 0.95rem; }
     table.learn { max-width: 860px; }
-    .jump { margin: 0 0 18px; }
-    .jump a { margin-right: 18px; }
+    details.fold { border-bottom: 1px solid var(--gray); }
+    details.fold > summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      cursor: pointer;
+      list-style: none;
+    }
+    details.fold > summary::-webkit-details-marker { display: none; }
+    details.fold > summary::before {
+      content: "+";
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border: 2px solid var(--violet);
+      color: var(--violet);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+    }
+    details.fold[open] > summary::before { content: "−"; }
+    details.fold > summary h2 { margin: 0; }
+    summary:focus-visible { outline: 2px solid var(--violet); outline-offset: 2px; }
+    .fold-body { padding: 0 0 16px 40px; }
     tr.im td { background: var(--row); }
     @media (max-width: 800px) {
       h1 { font-size: 1.55rem; }
@@ -137,8 +163,9 @@
     <h1>Кто отгружает клиентам B2B (юридическим лицам)</h1>
     <p class="lead">Ответы магазинов 12 и 13 ноября. Фиолетовым отмечен весь магазин, который в выходные отдаёт запрос операторам интернет-магазина.</p>
     <p class="fine">Должность из штатного на 10 ноября 2026 года. Где ответа нет, так и написано.</p>
-    <p class="jump"><a href="#dolzhnosti">Какие должности отгружают</a><a href="#obuchenie">Кому пройти обучение</a><a href="#magaziny">По магазинам</a></p>
-    <h2 id="dolzhnosti">Какие должности отгружают</h2>
+    <details class="fold" id="dolzhnosti">
+      <summary><h2>Какие должности отгружают</h2></summary>
+      <div class="fold-body">
     <p class="lead">2026 год, с 1 января по 31 октября. Суббота, воскресенье и праздники. В графике те, кто есть в штатном на 10 ноября: 1&nbsp;372 документа.</p>
     <p class="fine">Ещё 134 документа провели люди, которых в этом штатном уже нет. Их в график не ставила.</p>
     <div class="bars">
@@ -151,79 +178,76 @@
           <div class="bar"><span class="label">Сервис-менеджер</span><span class="track"><span class="fill" style="width:0.7%"></span></span><span class="num">5</span></div>
           <div class="bar"><span class="label">Менеджер по обучению и развитию персонала</span><span class="track"><span class="fill" style="width:0.1%"></span></span><span class="num">1</span></div>
     </div>
-    <h2 id="obuchenie">Кому пройти обучение</h2>
-    <p class="lead">61 человек, по фамилии. В магазинах, которые в выходные идут в интернет-магазин, здесь весь штат. В остальных только те, кого магазин сам назвал на обучение.</p>
+      </div>
+    </details>
+    <details class="fold" id="obuchenie">
+      <summary><h2>Кому пройти обучение</h2></summary>
+      <div class="fold-body">
+    <p class="lead">50 человек, по фамилии. Кладовщиков и работников торгового зала в список не ставила. В магазинах, которые в выходные идут в интернет-магазин, здесь остальные сотрудники. В других магазинах только те, кого сами назвали на обучение.</p>
     <div class="wrap">
       <table class="learn">
         <thead>
           <tr><th>Фамилия и имя</th><th>Должность</th><th>Магазин</th></tr>
         </thead>
         <tbody>
-            <tr><td>Атауллин Раиф</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
-            <tr><td>Баев Андрей</td><td>продавец&#8209;консультант</td><td>№23 Кулига</td></tr>
-            <tr><td>Белкина Наталья</td><td>кладовщик</td><td>№14 Боровский</td></tr>
-            <tr><td>Белослудцев Денис</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
-            <tr><td>Булатов Артем</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
-            <tr><td>Вакарин Никита</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
-            <tr><td>Вихарева Юлия</td><td>кассир торгового зала</td><td>№12 Чайка</td></tr>
-            <tr><td>Выдрин Василий</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
-            <tr><td>Гончар Станислав</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Горбунов Николай</td><td>продавец&#8209;консультант</td><td>№25 Щорса</td></tr>
-            <tr><td>Духонин Игорь</td><td>работник торгового зала</td><td>№12 Чайка</td></tr>
-            <tr><td>Егоров Эдуард</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
-            <tr><td>Зинов Сергей</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
-            <tr><td>Золотина Мария</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
-            <tr><td>Зырянова Анастасия</td><td>кассир торгового зала</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Зяблов Михаил</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
-            <tr><td>Изосимов Евгений</td><td>кладовщик</td><td>№21 Успенка</td></tr>
-            <tr><td>Ипатьев Андрей</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
-            <tr><td>Исаев Тимур</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
-            <tr><td>Кабанов Илья</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
-            <tr><td>Казакова Анна</td><td>продавец&#8209;консультант</td><td>№20 Перевалово</td></tr>
-            <tr><td>Караулов Сергей</td><td>кладовщик</td><td>№31 Заводоуковск</td></tr>
-            <tr><td>Каримов Альберт</td><td>продавец&#8209;консультант</td><td>№24 Мальково</td></tr>
-            <tr><td>Катрич Константин</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Каукин Дмитрий</td><td>кладовщик</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Козлов Александр</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
-            <tr><td>Кондратьева Ирина</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
-            <tr><td>Красильников Георгий</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
-            <tr><td>Кувялов Андрей</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
-            <tr><td>Кулушева Альбина</td><td>кладовщик</td><td>№27 Ембаево</td></tr>
-            <tr><td>Куршев Сергей</td><td>продавец&#8209;консультант</td><td>№12 Чайка</td></tr>
-            <tr><td>Лаговщина Ирина</td><td>кассир торгового зала</td><td>№14 Боровский</td></tr>
-            <tr><td>Лаптева Тамара</td><td>кассир торгового зала</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Лымарев Илья</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Лысенко Алексей</td><td>кладовщик</td><td>№12 Чайка</td></tr>
-            <tr><td>Меньщиков Семен</td><td>работник торгового зала</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Москвин Артём</td><td>кладовщик</td><td>№30 Ушакова</td></tr>
-            <tr><td>Мыльников Олег</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
-            <tr><td>Пепеляев Денис</td><td>продавец&#8209;консультант</td><td>№13 Винзили</td></tr>
-            <tr><td>Подчувалов Денис</td><td>менеджер по работе с клиентами</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Поповский Никита</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
-            <tr><td>Пузырева Екатерина</td><td>кладовщик</td><td>№19 Тюнево</td></tr>
-            <tr><td>Рахимов Такиюла</td><td>продавец&#8209;консультант</td><td>№13 Винзили</td></tr>
-            <tr><td>Романенко Никита</td><td>кладовщик</td><td>№15 Московский тракт</td></tr>
-            <tr><td>Русских Вероника</td><td>кассир торгового зала</td><td>№19 Тюнево</td></tr>
-            <tr><td>Рылов Виктор</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
-            <tr><td>Савинов Александр</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
-            <tr><td>Савинов Никита</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
-            <tr><td>Сарана Олег</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
-            <tr><td>Седельников Александр</td><td>продавец&#8209;консультант</td><td>№24 Мальково</td></tr>
-            <tr><td>Семенов Илья</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Сердцова Мария</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
-            <tr><td>Суковатая Ольга</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
-            <tr><td>Таскаев Иван</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
-            <tr><td>Ткачев Константин</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Хасаншин Руслан</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
-            <tr><td>Чуклин Роман</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
-            <tr><td>Шершнев Андрей</td><td>продавец&#8209;консультант</td><td>№28 Талица</td></tr>
-            <tr><td>Шихалев Вячеслав</td><td>продавец&#8209;консультант</td><td>№23 Кулига</td></tr>
-            <tr><td>Шураков Дмитрий</td><td>супервайзер</td><td>№5 Бабарынка</td></tr>
-            <tr><td>Эйхман Сергей</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
+<tr><td>Атауллин Раиф</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
+<tr><td>Баев Андрей</td><td>продавец&#8209;консультант</td><td>№23 Кулига</td></tr>
+<tr><td>Белослудцев Денис</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
+<tr><td>Булатов Артем</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
+<tr><td>Вакарин Никита</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
+<tr><td>Вихарева Юлия</td><td>кассир торгового зала</td><td>№12 Чайка</td></tr>
+<tr><td>Выдрин Василий</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
+<tr><td>Гончар Станислав</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
+<tr><td>Горбунов Николай</td><td>продавец&#8209;консультант</td><td>№25 Щорса</td></tr>
+<tr><td>Егоров Эдуард</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
+<tr><td>Зинов Сергей</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
+<tr><td>Золотина Мария</td><td>продавец&#8209;консультант</td><td>№27 Ембаево</td></tr>
+<tr><td>Зырянова Анастасия</td><td>кассир торгового зала</td><td>№5 Бабарынка</td></tr>
+<tr><td>Зяблов Михаил</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
+<tr><td>Ипатьев Андрей</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
+<tr><td>Исаев Тимур</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
+<tr><td>Кабанов Илья</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
+<tr><td>Казакова Анна</td><td>продавец&#8209;консультант</td><td>№20 Перевалово</td></tr>
+<tr><td>Каримов Альберт</td><td>продавец&#8209;консультант</td><td>№24 Мальково</td></tr>
+<tr><td>Катрич Константин</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
+<tr><td>Козлов Александр</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
+<tr><td>Кондратьева Ирина</td><td>продавец&#8209;консультант</td><td>№31 Заводоуковск</td></tr>
+<tr><td>Красильников Георгий</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
+<tr><td>Кувялов Андрей</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
+<tr><td>Куршев Сергей</td><td>продавец&#8209;консультант</td><td>№12 Чайка</td></tr>
+<tr><td>Лаговщина Ирина</td><td>кассир торгового зала</td><td>№14 Боровский</td></tr>
+<tr><td>Лаптева Тамара</td><td>кассир торгового зала</td><td>№5 Бабарынка</td></tr>
+<tr><td>Лымарев Илья</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
+<tr><td>Мыльников Олег</td><td>продавец&#8209;консультант</td><td>№7 Ожогина</td></tr>
+<tr><td>Пепеляев Денис</td><td>продавец&#8209;консультант</td><td>№13 Винзили</td></tr>
+<tr><td>Подчувалов Денис</td><td>менеджер по работе с клиентами</td><td>№5 Бабарынка</td></tr>
+<tr><td>Поповский Никита</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
+<tr><td>Рахимов Такиюла</td><td>продавец&#8209;консультант</td><td>№13 Винзили</td></tr>
+<tr><td>Русских Вероника</td><td>кассир торгового зала</td><td>№19 Тюнево</td></tr>
+<tr><td>Рылов Виктор</td><td>продавец&#8209;консультант</td><td>№14 Боровский</td></tr>
+<tr><td>Савинов Александр</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
+<tr><td>Савинов Никита</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
+<tr><td>Сарана Олег</td><td>продавец&#8209;консультант</td><td>№15 Московский тракт</td></tr>
+<tr><td>Седельников Александр</td><td>продавец&#8209;консультант</td><td>№24 Мальково</td></tr>
+<tr><td>Семенов Илья</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
+<tr><td>Сердцова Мария</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
+<tr><td>Суковатая Ольга</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
+<tr><td>Таскаев Иван</td><td>продавец&#8209;консультант</td><td>№21 Успенка</td></tr>
+<tr><td>Ткачев Константин</td><td>продавец&#8209;консультант</td><td>№5 Бабарынка</td></tr>
+<tr><td>Хасаншин Руслан</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
+<tr><td>Чуклин Роман</td><td>продавец&#8209;консультант</td><td>№30 Ушакова</td></tr>
+<tr><td>Шершнев Андрей</td><td>продавец&#8209;консультант</td><td>№28 Талица</td></tr>
+<tr><td>Шихалев Вячеслав</td><td>продавец&#8209;консультант</td><td>№23 Кулига</td></tr>
+<tr><td>Шураков Дмитрий</td><td>супервайзер</td><td>№5 Бабарынка</td></tr>
+<tr><td>Эйхман Сергей</td><td>продавец&#8209;консультант</td><td>№19 Тюнево</td></tr>
         </tbody>
       </table>
     </div>
-    <h2 id="magaziny">По магазинам</h2>
+      </div>
+    </details>
+    <details class="fold" id="magaziny">
+      <summary><h2>По магазинам</h2></summary>
+      <div class="fold-body">
     <div class="wrap">
       <table class="shops">
         <thead>
@@ -236,7 +260,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+<tr>
             <td class="store">№1 Дружбы</td>
             <td>
               <span class="person"><span class="name">Яна Абушева</span><span class="role">продавец&#8209;консультант</span></span>
@@ -249,14 +273,14 @@
             <td class="yn">НЕТ</td>
             <td>Закрывают сами.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№2 Авторемонтная</td>
             <td>Никто не назван</td>
             <td>Никого</td>
             <td class="yn">НЕТ</td>
             <td>Продавцы и кассир ответственность брать не готовы. В выходные документы проводят под учёткой Евдокии Умаровой. Так оставлять нельзя: проводит тот, кто оформил.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№3 Республики</td>
             <td>
               <span class="person"><span class="name">Денис Сущий</span><span class="role">продавец&#8209;консультант</span></span>
@@ -267,7 +291,7 @@
             <td class="yn">НЕТ</td>
             <td>Под именем Дарьи Строкиной больше не проводят. Она проверяет в понедельник. В праздники работает сама, суббота и воскресенье у неё выходные. Крупный заказ может приехать. В обучение вникать не хотят.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№5 Бабарынка</td>
             <td>
               <span class="person"><span class="name">Илья Семенов</span><span class="role">продавец&#8209;консультант</span></span>
@@ -275,7 +299,6 @@
             <td>
               <span class="person"><span class="name">Анастасия Зырянова</span><span class="role">кассир торгового зала</span></span>
               <span class="person"><span class="name">Тамара Лаптева</span><span class="role">кассир торгового зала</span></span>
-              <span class="person"><span class="name">Дмитрий Каукин</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Денис Подчувалов</span><span class="role">менеджер по работе с клиентами</span></span>
               <span class="person"><span class="name">Станислав Гончар</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Константин Катрич</span><span class="role">продавец&#8209;консультант</span></span>
@@ -283,12 +306,11 @@
               <span class="person"><span class="name">Илья Семенов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Константин Ткачев</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Дмитрий Шураков</span><span class="role">супервайзер</span></span>
-              <span class="person"><span class="name">Семен Меньщиков</span><span class="role">работник торгового зала</span></span>
             </td>
             <td class="yn">ДА</td>
             <td>Семенов отгружает, если смена выпадает на выходные. Кассиры отгрузки брать не согласны. Каждый документ только со своей учётки. Денис Подчувалов меняет пароль в 1С. В выходные обращаются к операторам интернет-магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№6 Сантехника</td>
             <td>
               <span class="person"><span class="name">Александр Киданов</span><span class="role">продавец&#8209;консультант</span></span>
@@ -298,7 +320,7 @@
             <td class="yn">НЕТ</td>
             <td>Могут позвонить операторам, если в смене не смогли отгрузить.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№7 Ожогина</td>
             <td>Никто не назван</td>
             <td>
@@ -311,7 +333,7 @@
             <td class="yn">ДА</td>
             <td>Сами написали, что обучение лишним не будет. В субботу и воскресенье запрос операторам интернет-магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№9 Червишево</td>
             <td>
               <span class="person"><span class="name">Алексей Бучельников</span><span class="role">продавец&#8209;консультант</span></span>
@@ -324,7 +346,7 @@
             <td class="yn">НЕТ</td>
             <td>СПК ответил: умеют все сотрудники магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№10 Старый Тобольский тракт</td>
             <td>
               <span class="person"><span class="name">Кристина Султанова</span><span class="role">кассир торгового зала</span></span>
@@ -334,14 +356,14 @@
             <td class="yn">НЕТ</td>
             <td>В субботу и воскресенье отгружают, никому не отказывают. Обучение не нужно.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№11 Березняки</td>
             <td>Никто не назван</td>
             <td>Не сказано</td>
             <td class="yn">НЕТ</td>
             <td>Татьяна Важенина, кассир торгового зала, работает 5/2, выходные у неё вторник и среда. В субботу и воскресенье она в смене. Умеет ли отгружать, магазин не написал.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№12 Чайка</td>
             <td>
               <span class="person"><span class="name">Мария Узкоглазова</span><span class="role">продавец&#8209;консультант</span></span>
@@ -349,13 +371,11 @@
             <td>
               <span class="person"><span class="name">Юлия Вихарева</span><span class="role">кассир торгового зала</span></span>
               <span class="person"><span class="name">Сергей Куршев</span><span class="role">продавец&#8209;консультант</span></span>
-              <span class="person"><span class="name">Алексей Лысенко</span><span class="role">кладовщик</span></span>
-              <span class="person"><span class="name">Игорь Духонин</span><span class="role">работник торгового зала</span></span>
             </td>
             <td class="yn">НЕТ</td>
             <td>Вихарева немного знает, её надо доучить. Остальные не знают. До декабря у Узкоглазовой пятница и суббота выходные. Субботу пока закрыть некем.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№13 Винзили</td>
             <td>
               <span class="person"><span class="name">Евгения Гитлайн</span><span class="role">продавец&#8209;консультант</span></span>
@@ -368,14 +388,13 @@
             <td class="yn">НЕТ</td>
             <td>Гитлайн отгружает, если клиент есть. Рахимов вышел из декрета, обучение идёт. Пепеляев работает меньше месяца, пока учит кассу. Николай Байков увольняется, его не ставим.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№14 Боровский</td>
             <td>
               <span class="person"><span class="name">Ирина Лаговщина</span><span class="role">кассир торгового зала</span></span>
             </td>
             <td>
               <span class="person"><span class="name">Ирина Лаговщина</span><span class="role">кассир торгового зала</span></span>
-              <span class="person"><span class="name">Наталья Белкина</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Тимур Исаев</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Андрей Кувялов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Виктор Рылов</span><span class="role">продавец&#8209;консультант</span></span>
@@ -383,13 +402,12 @@
             <td class="yn">ДА</td>
             <td>Продавцы умеют только поставить товар в резерв. Пока в смене продавец и он не обучен, запрос операторам интернет-магазина.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№15 Московский тракт</td>
             <td>
               <span class="person"><span class="name">Олег Сарана</span><span class="role">продавец&#8209;консультант</span></span>
             </td>
             <td>
-              <span class="person"><span class="name">Никита Романенко</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Георгий Красильников</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Никита Поповский</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Олег Сарана</span><span class="role">продавец&#8209;консультант</span></span>
@@ -397,7 +415,7 @@
             <td class="yn">ДА</td>
             <td>Новым показывает, до самостоятельной работы они не готовы. Времени нет, обещает заняться, когда штат будет полный. В субботу и воскресенье запрос операторам. Сарана передаст это команде.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№17 Луговое</td>
             <td>
               <span class="person"><span class="name">Ольга Шушарина</span><span class="role">кассир торгового зала</span></span>
@@ -408,7 +426,7 @@
             <td class="yn">НЕТ</td>
             <td>Назарову обучение не нужно. Смены закрывают сами.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№18 Решетникова</td>
             <td>
               <span class="person"><span class="name">Александр Бастриков</span><span class="role">продавец&#8209;консультант</span></span>
@@ -421,14 +439,13 @@
             <td class="yn">НЕТ</td>
             <td>СПК ответил: умеют все.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№19 Тюнево</td>
             <td>
               <span class="person"><span class="name">Вероника Русских</span><span class="role">кассир торгового зала</span></span>
             </td>
             <td>
               <span class="person"><span class="name">Вероника Русских</span><span class="role">кассир торгового зала</span></span>
-              <span class="person"><span class="name">Екатерина Пузырева</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Денис Белослудцев</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Мария Сердцова</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Сергей Эйхман</span><span class="role">продавец&#8209;консультант</span></span>
@@ -436,7 +453,7 @@
             <td class="yn">ДА</td>
             <td>У Русских последняя неделя. Алексей и Денис с юридическими лицами не работают, только касса. Пока нового кассира не обучили и если в смене нет того, кто умеет, звонят и пишут операторам интернет-магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№20 Перевалово</td>
             <td>
               <span class="person"><span class="name">Ирина Егорова</span><span class="role">продавец&#8209;консультант</span></span>
@@ -447,11 +464,10 @@
             <td class="yn">НЕТ</td>
             <td>Валентин Кайков дорабатывает до 22 ноября и уходит. В смену Казаковой, пока она не умеет сама, запрос можно отдать операторам.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№21 Успенка</td>
             <td>Никто не назван</td>
             <td>
-              <span class="person"><span class="name">Евгений Изосимов</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Александр Савинов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Никита Савинов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Иван Таскаев</span><span class="role">продавец&#8209;консультант</span></span>
@@ -459,7 +475,7 @@
             <td class="yn">ДА</td>
             <td>Ответа магазина нет. По нашему выводу в выходные запрос передают операторам.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№23 Кулига</td>
             <td>Никто</td>
             <td>
@@ -469,7 +485,7 @@
             <td class="yn">ДА</td>
             <td>Не умеют работать с юридическими лицами. Запрос операторам интернет-магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№24 Мальково</td>
             <td>
               <span class="person"><span class="name">Юлия Алешкова</span><span class="role">продавец&#8209;консультант</span></span>
@@ -482,7 +498,7 @@
             <td class="yn">НЕТ</td>
             <td>Алешкова и Гольнев сами не ведут: звонят Дарье Строкиной и отгружают по видео под её контролем. Юридических лиц мало. Седельников и Каримов каждый раз как в первый. Если Строкиной нет на связи, запрос операторам.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№25 Щорса</td>
             <td>
               <span class="person"><span class="name">Мария Чагина</span><span class="role">продавец&#8209;консультант</span></span>
@@ -494,7 +510,7 @@
             <td class="yn">НЕТ</td>
             <td>Горбунову объясняют. Если в смене он и ещё не проводит документ сам, запрос операторам.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№26 Курган, Омская</td>
             <td>
               <span class="person"><span class="name">Алексей Окуньков</span><span class="role">продавец&#8209;консультант</span></span>
@@ -504,22 +520,21 @@
             <td class="yn">НЕТ</td>
             <td>Окуньков проводит сам. Репина в целом умеет, практики мало, звонит Александру Коновалову, супервайзеру. Оба проводят под своей учёткой. Интернет-магазин как подмога, не вместо Окунькова.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№27 Ембаево</td>
             <td>
               <span class="person"><span class="name">Никита Вакарин</span><span class="role">продавец&#8209;консультант</span></span>
             </td>
             <td>
-              <span class="person"><span class="name">Альбина Кулушева</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Раиф Атауллин</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Никита Вакарин</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Василий Выдрин</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Мария Золотина</span><span class="role">продавец&#8209;консультант</span></span>
             </td>
             <td class="yn">ДА</td>
-            <td>График у коллег нестабильный. Вакарин умеет. В выходные обращаются к операторам интернет-магазина. Обучаем весь магазин.</td>
+            <td>График у коллег нестабильный. Вакарин умеет. В выходные обращаются к операторам интернет-магазина.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№28 Талица</td>
             <td>
               <span class="person"><span class="name">Александр Вяткин</span><span class="role">продавец&#8209;консультант</span></span>
@@ -532,7 +547,7 @@
             <td class="yn">НЕТ</td>
             <td>Кузьмич умеет. Шершнев не умеет. Если в смене Шершнев, запрос операторам.</td>
           </tr>
-          <tr>
+<tr>
             <td class="store">№29 Курган, Утятская</td>
             <td>
               <span class="person"><span class="name">Марина Зырянова</span><span class="role">продавец&#8209;консультант</span></span>
@@ -542,13 +557,12 @@
             <td class="yn">НЕТ</td>
             <td>Оба проводят только под своей учёткой. Вопрос Александру Коновалову, супервайзеру. Обучение уже было, практика набирается. Если с ним вопрос не закрыли, можно в интернет-магазин.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№30 Ушакова</td>
             <td>
               <span class="person"><span class="name">Ольга Суковатая</span><span class="role">продавец&#8209;консультант</span></span>
             </td>
             <td>
-              <span class="person"><span class="name">Артём Москвин</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Сергей Зинов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Ольга Суковатая</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Руслан Хасаншин</span><span class="role">продавец&#8209;консультант</span></span>
@@ -557,11 +571,10 @@
             <td class="yn">ДА</td>
             <td>Чуклин и Зинов отгружают по телефону с Суковатой. Самостоятельно пока нет, обучение нужно. Если Суковатой нет на телефоне, запрос операторам.</td>
           </tr>
-          <tr class="im">
+<tr class="im">
             <td class="store">№31 Заводоуковск</td>
             <td>Никто</td>
             <td>
-              <span class="person"><span class="name">Сергей Караулов</span><span class="role">кладовщик</span></span>
               <span class="person"><span class="name">Михаил Зяблов</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Андрей Ипатьев</span><span class="role">продавец&#8209;консультант</span></span>
               <span class="person"><span class="name">Ирина Кондратьева</span><span class="role">продавец&#8209;консультант</span></span>
@@ -572,7 +585,9 @@
         </tbody>
       </table>
     </div>
-    <p class="fine">Фиолетовым отмечен магазин целиком: в выходные запрос уходит операторам интернет-магазина. В таких строках в колонке «Надо научить» весь магазин, кто сейчас в штате.</p>
+    <p class="fine">Фиолетовым отмечен магазин целиком: в выходные запрос уходит операторам интернет-магазина. Кладовщиков и работников торгового зала в обучение не ставим.</p>
+      </div>
+    </details>
   </main>
 </body>
 </html>
